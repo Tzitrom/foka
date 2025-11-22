@@ -1,10 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\demo",
-    "\\demo\\bin",
     "\\src"
   ],
-  "SelectedNode": "\\demo\\bin\\gdexample.gdextension",
+  "SelectedNode": "\\src\\porges.cpp",
   "PreviewInSolutionExplorer": false
 }

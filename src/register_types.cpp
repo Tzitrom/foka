@@ -1,6 +1,7 @@
 #include "register_types.h"
 
 #include "gdexample.h"
+#include "porges.hpp"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -13,6 +14,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
         return;
     }
 
+    GDREGISTER_CLASS(Gomb)
     GDREGISTER_RUNTIME_CLASS(GDExample);
 }
 
