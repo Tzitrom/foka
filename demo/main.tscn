@@ -10,6 +10,7 @@ size = Vector2(31.11, 4.61)
 
 [node name="leon" type="Sprite2D" parent="."]
 position = Vector2(576, 324)
+rotation = 3.1415927
 scale = Vector2(0.33, 0.33)
 texture = ExtResource("1_0xm2m")
 script = ExtResource("2_h2yge")
