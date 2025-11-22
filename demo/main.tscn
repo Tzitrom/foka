@@ -1,5 +1,28 @@
-[gd_scene format=3 uid="uid://bcm8xcp4mwlxa"]
+[gd_scene load_steps=4 format=3 uid="uid://bcm8xcp4mwlxa"]
+
+[ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://cat leon without bg.webp" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://oegexj2g5vr1" path="res://leon.gd" id="2_h2yge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
+size = Vector2(31.11, 4.61)
 
 [node name="main" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="leon" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.33, 0.33)
+texture = ExtResource("1_0xm2m")
+script = ExtResource("2_h2yge")
+
+[node name="Area2D" type="Area2D" parent="."]
+editor_description = "what the fuck
+"
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(576, 562.58)
+scale = Vector2(37.03, 37.03)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+shape = SubResource("RectangleShape2D_7dm0k")
