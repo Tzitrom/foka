@@ -14,7 +14,7 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
         return;
     }
 
-    GDREGISTER_CLASS(Gomb)
+    GDREGISTER_CLASS(Gomb);
     GDREGISTER_RUNTIME_CLASS(GDExample);
 }
 

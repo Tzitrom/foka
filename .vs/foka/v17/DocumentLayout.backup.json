@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\porges.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\godot\\foka\\SConstruct||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:SConstruct||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\godot\\foka\\src\\porges.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:src\\porges.hpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
@@ -26,11 +30,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "SConstruct",
+              "DocumentMoniker": "D:\\godot\\foka\\SConstruct",
+              "RelativeDocumentMoniker": "SConstruct",
+              "ToolTip": "D:\\godot\\foka\\SConstruct",
+              "RelativeToolTip": "SConstruct",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAYAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-11-22T20:29:34.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "register_types.cpp",
               "DocumentMoniker": "D:\\godot\\foka\\src\\register_types.cpp",
               "RelativeDocumentMoniker": "src\\register_types.cpp",
@@ -49,27 +66,27 @@
               "RelativeDocumentMoniker": "src\\porges.cpp",
               "ToolTip": "D:\\godot\\foka\\src\\porges.cpp",
               "RelativeToolTip": "src\\porges.cpp",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAABcAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABYAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-22T15:52:34.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "porges.hpp",
               "DocumentMoniker": "D:\\godot\\foka\\src\\porges.hpp",
               "RelativeDocumentMoniker": "src\\porges.hpp",
               "ToolTip": "D:\\godot\\foka\\src\\porges.hpp",
               "RelativeToolTip": "src\\porges.hpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAfAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAxwBEAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-22T15:50:01.779Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "gdexample.cpp",
               "DocumentMoniker": "D:\\godot\\foka\\src\\gdexample.cpp",
               "RelativeDocumentMoniker": "src\\gdexample.cpp",
@@ -77,8 +94,7 @@
               "RelativeToolTip": "src\\gdexample.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-22T15:47:52.622Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-22T15:47:52.622Z"
             }
           ]
         }
