@@ -1,7 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcm8xcp4mwlxa"]
+[gd_scene load_steps=8 format=3 uid="uid://bcm8xcp4mwlxa"]
 
-[ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://cat leon without bg.webp" id="1_0xm2m"]
-[ext_resource type="Script" uid="uid://cfcd7tvlwamch" path="res://gd_example.gd" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://cat leon without bg.webp" id="2_0xm2m"]
+[ext_resource type="Script" uid="uid://der0rh0ruthhg" path="res://jump_button.gd" id="3_1bvp3"]
 [ext_resource type="Texture2D" uid="uid://0sl4w0eecglj" path="res://icon.svg" id="3_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
@@ -13,16 +13,14 @@ size = Vector2(1151.5, 202)
 radius = 38.0
 height = 152.0
 
-[node name="main" type="Node2D"]
+[sub_resource type="GDScript" id="GDScript_0xm2m"]
+script/source = "extends Player
 
-[node name="GDExample" type="GDExample" parent="."]
-speed = 5.0
-visible = false
-scale = Vector2(0.4280001, 0.4280001)
-texture = ExtResource("1_0xm2m")
-centered = false
-offset = Vector2(576, 324)
-script = ExtResource("2_0xm2m")
+func _on_jump_button_jump() -> void:
+	print(\"I am the Player.\")
+"
+
+[node name="main" type="Node2D"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
@@ -36,14 +34,51 @@ position = Vector2(576.25, 546)
 shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
-position = Vector2(561, 191)
-rotation = -0.56893
+position = Vector2(321, 117)
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D"]
+position = Vector2(1.684956, 1.0774618)
 scale = Vector2(75.5, 75.5)
 mesh = SubResource("CapsuleMesh_lquwl")
+texture = ExtResource("3_h2yge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CapsuleShape2D_7mycd")
 
-[connection signal="position_changed" from="GDExample" to="GDExample" method="_on_position_changed"]
+[node name="Player" type="Player" parent="."]
+position = Vector2(917, -208)
+script = SubResource("GDScript_0xm2m")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="Player"]
+scale = Vector2(75.5, 75.5)
+mesh = SubResource("CapsuleMesh_lquwl")
+texture = ExtResource("2_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+shape = SubResource("CapsuleShape2D_7mycd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 260.0
+offset_top = 10.0
+offset_right = 386.0
+offset_bottom = 33.0
+text = "Godot Rigid Body"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 878.0
+offset_top = 11.0
+offset_right = 1040.0
+offset_bottom = 34.0
+text = "C++ Gravity"
+
+[node name="jumpButton" type="jumpButton" parent="."]
+offset_left = 895.0
+offset_top = 46.0
+offset_right = 943.0
+offset_bottom = 77.0
+text = "jump"
+script = ExtResource("3_1bvp3")
+
+[connection signal="jump" from="jumpButton" to="Player" method="_on_jump_button_jump"]
+[connection signal="pressed" from="jumpButton" to="jumpButton" method="_on_pressed"]
+[connection signal="print" from="jumpButton" to="jumpButton" method="_on_print"]
