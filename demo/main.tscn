@@ -1,30 +1,21 @@
 [gd_scene load_steps=4 format=3 uid="uid://bcm8xcp4mwlxa"]
 
 [ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://cat leon without bg.webp" id="1_0xm2m"]
-
-[sub_resource type="GDScript" id="GDScript_ig7tw"]
-script/source = "extends Sprite2D
-
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
-"
+[ext_resource type="Script" uid="uid://cfcd7tvlwamch" path="res://gd_example.gd" id="2_0xm2m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7dm0k"]
 size = Vector2(31.11, 4.61)
 
 [node name="main" type="Node2D"]
 
-[node name="leon" type="Sprite2D" parent="."]
-position = Vector2(576, 324)
-scale = Vector2(0.33, 0.33)
+[node name="GDExample" type="GDExample" parent="."]
+amplitude = 200.0
+speed = 20.0
+scale = Vector2(0.4280001, 0.4280001)
 texture = ExtResource("1_0xm2m")
-script = SubResource("GDScript_ig7tw")
+centered = false
+offset = Vector2(576, 324)
+script = ExtResource("2_0xm2m")
 
 [node name="Area2D" type="Area2D" parent="."]
 editor_description = "what the fuck
@@ -39,18 +30,4 @@ modulate = Color(0, 0, 0, 1)
 self_modulate = Color(0, 0, 0, 1)
 shape = SubResource("RectangleShape2D_7dm0k")
 
-[node name="Gomb" type="Gomb" parent="."]
-offset_left = 556.0
-offset_top = 131.0
-offset_right = 596.0
-offset_bottom = 171.0
-
-[node name="Gomg" type="Button" parent="Gomb"]
-layout_mode = 0
-offset_left = -113.0
-offset_top = -46.0
-offset_right = 114.0
-offset_bottom = 40.0
-action_mode = 0
-button_mask = 7
-text = "test"
+[connection signal="position_changed" from="GDExample" to="GDExample" method="_on_position_changed"]
