@@ -5,14 +5,14 @@
 using namespace godot;
 
 void jumpButton::_bind_methods() {
-	ADD_SIGNAL(MethodInfo("jump"));
+	ADD_SIGNAL(MethodInfo("gomb_pressed"));
 	ADD_SIGNAL(MethodInfo("print"));
 }
 
 
 void jumpButton::jumpEmit() {
 	if (&BaseButton::is_pressed) {
-		Button::emit_signal("jump", this, &Player::jump);
+		Button::emit_signal("gomb_pressed");
 	}
 }
 

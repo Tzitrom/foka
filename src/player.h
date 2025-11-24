@@ -20,5 +20,6 @@ namespace godot {
 
         void _process(double delta);
         void jump();
+        void _ready() override;
     };
 }
