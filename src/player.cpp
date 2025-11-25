@@ -9,7 +9,7 @@ void Player::_bind_methods() {
 }
 
 Player::Player() {
-	gravity = 0;
+	gravity = -9.81;
 	jump_signal = false;
 }
 
@@ -19,16 +19,19 @@ Player::~Player() {
 void Player::_process(double delta) {
 	set_velocity(get_velocity() - Vector2(0, gravity) * delta);
 	move_and_collide(get_velocity());
-	gravity = gravity - 0.2;
+
+	if (jump_signal) {
+		jump();
+	}
 }
 
 void Player::_ready() {
-	get_node<Button>("jumpButton")->connect("gomb_pressed", Callable(this, "jump"));
+	(Error)get_node<Button>("jumpButton")->connect("gomb_pressed", Callable(this, "jump"));
+	count++;
 }
 
 
 void Player::jump() {
-	UtilityFunctions::print("Player::jump() called");
-	set_position(get_position() + Vector2(0, -40));
-	set_velocity(Vector2(0, -300));
+	set_velocity(Vector2(0, -2));
+	count++;
 }

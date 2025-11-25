@@ -13,4 +13,8 @@ public:
 	void jumpEmit();
 	void testprint();
 	void print();
+	void _process(double delta) override;
+
+private:
+	bool is_pressed = false;
 };

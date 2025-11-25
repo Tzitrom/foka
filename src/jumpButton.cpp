@@ -17,11 +17,21 @@ void jumpButton::jumpEmit() {
 }
 
 void jumpButton::testprint() {
-	Button::emit_signal("print", Callable(this, "print"));
 }
 
 void jumpButton::print() {
 	UtilityFunctions::print("hello");
 }
 
+void jumpButton::_process(double delta) {
+	if (BaseButton::is_pressed()) {
+		if (!is_pressed) {
+			Button::emit_signal("gomb_pressed");
+			is_pressed = true;
+		}
+	}
+	else {
+		is_pressed = false;
+	}
+}
 

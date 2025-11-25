@@ -11,6 +11,7 @@ namespace godot {
     private:
         double gravity;
         bool jump_signal;
+        int count = 0;
     protected:
         static void _bind_methods();
 
