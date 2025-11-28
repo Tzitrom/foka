@@ -20,6 +20,8 @@ void Player::_process(double delta) {
 	set_velocity(get_velocity() - Vector2(0, gravity) * delta);
 	move_and_collide(get_velocity());
 
+	UtilityFunctions::print(CharacterBody2D::get_slide_collision_count());
+
 	if (jump_signal) {
 		jump();
 	}
