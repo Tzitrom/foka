@@ -1,7 +1,9 @@
-#include "gdexample.h"
-#include <godot_cpp/core/class_db.hpp>
+//Ezt a tutorialt a Godot docs alapján készítettem: https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html
 
-using namespace godot;
+#include "gdexample.h" //Azért hogy lássuk a gdexample.h tartalmát
+#include <godot_cpp/core/class_db.hpp> //Kötelezõ
+
+using namespace godot; //Ha nem akarod odatenni minden sor elé hogy godot:: xd
 
 void GDExample::_bind_methods() {
     ClassDB::bind_method(D_METHOD("get_amplitude"), &GDExample::get_amplitude);
