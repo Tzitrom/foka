@@ -56,7 +56,7 @@
               "RelativeDocumentMoniker": "src\\player.cpp",
               "ToolTip": "D:\\godot\\foka\\src\\player.cpp",
               "RelativeToolTip": "src\\player.cpp",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-11-23T15:05:36.173Z",
               "IsPinned": true,
@@ -73,8 +73,7 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
               "WhenOpened": "2025-11-23T15:04:15.974Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Bookmark",
@@ -90,8 +89,7 @@
               "RelativeToolTip": "src\\jumpButton.cpp",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB8AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-11-23T15:45:34.253Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T15:45:34.253Z"
             },
             {
               "$type": "Document",
@@ -103,8 +101,7 @@
               "RelativeToolTip": "src\\jumpButton.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-11-23T15:37:26.652Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-23T15:37:26.652Z"
             },
             {
               "$type": "Document",
