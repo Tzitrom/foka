@@ -1,12 +1,12 @@
-#include "jumpButton.h"//Azért hogy lássuk a jumpButton.h tartalmát
-#include "player.h"// Azért hogy tudjuk használni a Player-t
-#include <godot_cpp/core/class_db.hpp>//Kötelezõ
+#include "jumpButton.h"//Azert hogy lassuk a jumpButton.h tartalmat
+#include "player.h"// Azert hogy tudjuk hasznalni a Player-t
+#include <godot_cpp/core/class_db.hpp>//Kotelezo
 
-using namespace godot;//Ha nem akarod odatenni minden sor elé hogy godot:: xd
+using namespace godot;//Ha nem akarod odatenni minden sor ele hogy godot:: xd
 
-void jumpButton::_bind_methods() { //Azért hogy a godot tudja használni a függvényeket
-	ADD_SIGNAL(MethodInfo("gomb_pressed")); //Létrehoz egy "gomb_pressed" jelet, ami gyakorlatilag olyan mintha a jumpButton mindenkinek írna egy üzenetet, hogy a gombot megnyomták
-	ADD_SIGNAL(MethodInfo("print")); //Létrehoz egy "print" jelet (felesleges)
+void jumpButton::_bind_methods() { //Azert hogy a godot tudja hasznalni a fuggvenyeket
+	ADD_SIGNAL(MethodInfo("gomb_pressed")); //Letrehoz egy "gomb_pressed" jelet, ami gyakorlatilag olyan mintha a jumpButton elorditana magat, hogy a gombot megnyomtak
+	ADD_SIGNAL(MethodInfo("print")); //Letrehoz egy "print" jelet (felesleges)
 }
 
 
@@ -16,22 +16,22 @@ void jumpButton::jumpEmit() { //felesleges
 	}
 }
 
-void jumpButton::testprint() { //üres :(
+void jumpButton::testprint() { //ures :(
 }
 
-void jumpButton::print() {  //tesztkiírás
+void jumpButton::print() {  //tesztkiiras
 	UtilityFunctions::print("hello");
 }
 
-void jumpButton::_process(double delta) {  //Minden frameben meghívódik
+void jumpButton::_process(double delta) {  //Minden frameben meghivodik
 	if (BaseButton::is_pressed()) {  //Ha a gomb le van nyomva
 		if (!is_pressed) { //Ha eddig nem volt lenyomva
-			Button::emit_signal("gomb_pressed"); //Küld egy jelet, hogy a gombot megnyomták
-			is_pressed = true; //Beállítja, hogy a gomb le van nyomva
+			Button::emit_signal("gomb_pressed"); //Kuld egy jelet, hogy a gombot megnyomtak
+			is_pressed = true; //Beallitja, hogy a gomb le van nyomva
 		}
 	}
 	else { //Ha a gomb nincs lenyomva
-		is_pressed = false; //Beállítja, hogy a gomb nincs lenyomva
+		is_pressed = false; //Beallitja, hogy a gomb nincs lenyomva
 	}
 }
 

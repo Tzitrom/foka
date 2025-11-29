@@ -1,4 +1,4 @@
-//Ide be kell tenni az osztályokat, hogy a Godotban ott legyenek
+//Ide be kell tenni az osztalyokat, hogy a Godotban ott legyenek
 
 #include "register_types.h"
 
@@ -17,9 +17,9 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
         return;
     }
 
-    GDREGISTER_RUNTIME_CLASS(GDExample); //Itt a GDExample osztály, hogy lássa a Godot
-	GDREGISTER_RUNTIME_CLASS(Player);  //Itt a Player osztály, hogy lássa a Godot
-	GDREGISTER_RUNTIME_CLASS(jumpButton); //Itt a jumpButton osztály, hogy lássa a Godot
+    GDREGISTER_RUNTIME_CLASS(GDExample); //Itt a GDExample osztaly, hogy lassa a Godot
+	GDREGISTER_RUNTIME_CLASS(Player);  //Itt a Player osztaly, hogy lassa a Godot
+	GDREGISTER_RUNTIME_CLASS(jumpButton); //Itt a jumpButton osztaly, hogy lassa a Godot
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {

@@ -1,19 +1,19 @@
-#pragma once//minden header elején legyen ott
+#pragma once//minden header elejen legyen ott
 
-#include <godot_cpp/classes/button.hpp>  //meghatározza a jumpButton típusát godotban, ebben az esetben Button
+#include <godot_cpp/classes/button.hpp>  //meghatarozza a jumpButton tipusat godotban, ebben az esetben Button
 
-using namespace godot;  //Ha nem akarod odatenni minden sor elé hogy godot:: xd
+using namespace godot;  //Ha nem akarod odatenni minden sor ele hogy godot:: xd
 
-class jumpButton : public Button { //A jumpButton osztály a Button osztályból származik
-	GDCLASS(jumpButton, Button) //Ez egy makró, ami egy rakat kód röviden, hogy a godot értse, hogy ez egy Button típusú osztály
+class jumpButton : public Button { //A jumpButton osztaly a Button osztalybol szarmazik
+	GDCLASS(jumpButton, Button) //Ez egy makro, ami egy rakat kod roviden, hogy a godot ertse, hogy ez egy Button tipusu osztaly
 
 protected:
-	static void _bind_methods(); //Azért hogy a godot tudja használni a függvényeket
+	static void _bind_methods(); //Azert hogy a godot tudja hasznalni a fuggvenyeket
 public:
 	void jumpEmit(); //felesleges
-	void testprint(); //üres :(
-	void print(); //tesztkiírás
-	void _process(double delta) override; //Minden frameben meghívódik
+	void testprint(); //ures :(
+	void print(); //tesztkiiras
+	void _process(double delta) override; //Minden frameben meghivodik
 
 private:
 	bool is_pressed = false; //A gomb lenyomva van-e
