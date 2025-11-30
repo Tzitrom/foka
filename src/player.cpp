@@ -3,6 +3,7 @@
 #include "player.h" //Azert hogy lassuk a player.h tartalmat
 #include <godot_cpp/core/class_db.hpp>  //Kotelezo
 #include <godot_cpp/classes/input.hpp>
+#include <godot_cpp/classes/sprite2d.hpp>
 
 using namespace godot;  //Ha nem akarod odatenni minden sor ele hogy godot:: xd
 
@@ -16,6 +17,10 @@ Player::Player() {  //Konstruktor
 }
 
 Player::~Player() { //Destruktor (felesleges)
+}
+
+void Player::_ready() {  //Ez alap godot fuggveny, ami akkor fut le, amikor a karakterunk bejon a kepbe, magyarul amikor elindul a program
+textura = get_node<Sprite2D>("textura"); //Lekeri a karakter sprite-jat
 }
 
 void Player::_process(double delta) {   //Ez az alap godot fuggveny, ami minden frameben lefut. a delta az eltelt ido az elozo frame ota
@@ -36,11 +41,17 @@ void Player::_process(double delta) {   //Ez az alap godot fuggveny, ami minden 
 	
 	move_and_slide(); //Mozgatja a karaktert, az utkozeskor lenullazza a sebesseget az adott iranyban
 	/* --TESZTKIIRAS-- */
-	UtilityFunctions::print(get_velocity()); //Kiir a konzolra valamit, nyugodtan allitsuk hogy eppen mit, tesztelesi okokbol
+	// UtilityFunctions::print(get_velocity()); //Kiir a konzolra valamit, nyugodtan allitsuk hogy eppen mit, tesztelesi okokbol
+	/* --FORGAS-- */
+	Vector2 mouse = get_global_mouse_position() - get_global_position(); //A karakter es az eger pozicioja kozotti vektor
+	if (mouse.x > 0) { //Ha az eger a karakter bal oldalan van
+		textura->set_flip_h(false); //forduljon meg a karakter
+	} else if (mouse.x < 0) { //Egyebkent (ha az eger a karakter jobb oldalan van)
+		textura->set_flip_h(true);//nem fordul meg a karakter
+	}
 }
 
-void Player::_ready() {  //Ez alap godot fuggveny, ami akkor fut le, amikor a karakterunk bejon a kepbe, magyarul amikor elindul a program
-}
+
 
 
 void Player::jump() {//ugras fuggveny

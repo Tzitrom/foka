@@ -1,6 +1,7 @@
 #pragma once//minden header elejen legyen ott pls
 
 #include <godot_cpp/classes/character_body2d.hpp>  //meghatarozza a karakterunk tipusat godotban, ebben az esetben CharacterBody2D
+#include <godot_cpp/classes/sprite2d.hpp> //sprite2d osztaly, hogy kezelni tudjuk a karakter texturajat
 
 
 namespace godot { //mintha using namespace godot; lenne, viszont csak a {}-on belul ervenyes
@@ -16,6 +17,7 @@ namespace godot { //mintha using namespace godot; lenne, viszont csak a {}-on be
 		const float JUMP_SIZE = -400; //vitathato, kiserletezzunk
 		const float MAX_SPEED = 500; //max vizszintes speed (ennel lehet egy kicsit gyorsabb, kiserletezzunk
 		const float FRICTION = 0.8; //mennyire lassuljon le a karakter, ha nem nyomunk semmit (0.8 eleg jo)
+		Sprite2D* textura = nullptr; //a karakter texturaja
     protected:
 		static void _bind_methods();  //Azert hogy a godot tudja hasznalni a fuggvenyeket
 

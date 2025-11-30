@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://bcm8xcp4mwlxa"]
+[gd_scene load_steps=7 format=3 uid="uid://bcm8xcp4mwlxa"]
 
 [ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://cat leon without bg.webp" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://0sl4w0eecglj" path="res://icon.svg" id="3_h2yge"]
@@ -11,6 +11,9 @@ size = Vector2(1151.5, 202)
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7mycd"]
 radius = 38.0
 height = 152.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(66, 116)
 
 [node name="main" type="Node2D"]
 
@@ -41,13 +44,14 @@ shape = SubResource("CapsuleShape2D_7mycd")
 [node name="Player" type="Player" parent="."]
 position = Vector2(923, 118)
 
-[node name="MeshInstance2D2" type="MeshInstance2D" parent="Player"]
-scale = Vector2(75.5, 75.5)
-mesh = SubResource("CapsuleMesh_lquwl")
+[node name="textura" type="Sprite2D" parent="Player"]
+position = Vector2(1.9999924, -2.0000153)
+scale = Vector2(0.268, 0.268)
 texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-shape = SubResource("CapsuleShape2D_7mycd")
+position = Vector2(2, -2)
+shape = SubResource("RectangleShape2D_0xm2m")
 
 [node name="Label" type="Label" parent="."]
 offset_left = 260.0

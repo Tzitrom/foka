@@ -15,7 +15,6 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
     if (p_level != MODULE_INITIALIZATION_LEVEL_SCENE) {
         return;
     }
-
     GDREGISTER_RUNTIME_CLASS(GDExample); //Itt a GDExample osztaly, hogy lassa a Godot
 	GDREGISTER_RUNTIME_CLASS(Player);  //Itt a Player osztaly, hogy lassa a Godot
 }
