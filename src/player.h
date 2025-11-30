@@ -1,26 +1,31 @@
-#pragma once//minden header elején legyen ott pls
+#pragma once//minden header elejen legyen ott pls
 
-#include <godot_cpp/classes/character_body2d.hpp>  //meghatározza a karakterünk típusát godotban, ebben az esetben CharacterBody2D
+#include <godot_cpp/classes/character_body2d.hpp>  //meghatarozza a karakterunk tipusat godotban, ebben az esetben CharacterBody2D
 
 
-namespace godot { //mintha using namespace godot; lenne, viszont csak a {}-on belül érvényes
+namespace godot { //mintha using namespace godot; lenne, viszont csak a {}-on belul ervenyes
 
-	class Player : public CharacterBody2D { //A Player osztály a CharacterBody2D osztályból származik
-		GDCLASS(Player, CharacterBody2D) //Ez egy makró, ami egy rakat kód röviden, hogy a godot értse, hogy ez egy CharacterBody2D típusú osztály
+	class Player : public CharacterBody2D { //A Player osztaly a CharacterBody2D osztalybol szarmazik
+		GDCLASS(Player, CharacterBody2D) //Ez egy makro, ami egy rakat kod roviden, hogy a godot ertse, hogy ez egy CharacterBody2D tipusu osztaly
 
-    private:  //privát
-        double gravity; //gravitáció
+    private:  //privat
+        double gravity; //gravitacio
 		bool jump_possible;  //felesleges
-		int count = 0; //ugrás számláló (felesleges)
+		int count = 0; //ugras szamlalo (felesleges)
+		const float SPEED = 100; //milyen gyorsan gyorsul a karakter vizszintesen a MAX_SPEED-ig
+		const float JUMP_SIZE = -400; //vitathato, kiserletezzunk
+		const float MAX_SPEED = 500; //max vizszintes speed (ennel lehet egy kicsit gyorsabb, kiserletezzunk
+		const float FRICTION = 0.8; //mennyire lassuljon le a karakter, ha nem nyomunk semmit (0.8 eleg jo)
     protected:
-		static void _bind_methods();  //Azért hogy a godot tudja használni a függvényeket
+		static void _bind_methods();  //Azert hogy a godot tudja hasznalni a fuggvenyeket
 
     public:
 		Player();  //Konstruktor
 		~Player(); //Destruktor 
 
-		void _process(double delta);  //Ez az alap godot függvény, ami minden frameben lefut. a delta az eltelt idõ az elõzõ frame óta
-		void jump(); //ugrás függvény
-		void _ready() override; //Ez alap godot függvény, ami akkor fut le, amikor a karakterünk bejön a képbe, magyarul amikor elindul a program
+		void _process(double delta);  //Ez az alap godot fuggveny, ami minden frameben lefut. a delta az eltelt ido az elozo frame ota
+		void jump(); //ugras fuggveny
+		void _ready() override; //Ez alap godot fuggveny, ami akkor fut le, amikor a karakterunk bejon a kepbe, magyarul amikor elindul a program
+		void move();
     };
 }
