@@ -27,6 +27,7 @@ shape = SubResource("RectangleShape2D_1bvp3")
 
 [node name="RigidBody2D" type="RigidBody2D" parent="."]
 position = Vector2(321, 117)
+rotation = 0.71343905
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="RigidBody2D"]
 position = Vector2(1.684956, 1.0774618)
@@ -47,13 +48,6 @@ texture = ExtResource("2_0xm2m")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CapsuleShape2D_7mycd")
-
-[node name="jumpButton" type="jumpButton" parent="Player"]
-offset_left = 81.0
-offset_top = -19.0
-offset_right = 129.0
-offset_bottom = 12.0
-text = "jump"
 
 [node name="Label" type="Label" parent="."]
 offset_left = 260.0

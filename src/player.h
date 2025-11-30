@@ -12,9 +12,10 @@ namespace godot { //mintha using namespace godot; lenne, viszont csak a {}-on be
         double gravity; //gravitacio
 		bool jump_possible;  //felesleges
 		int count = 0; //ugras szamlalo (felesleges)
-		const float SPEED = 10; //milyen gyorsan gyorsul a karakter vizszintesen a MAX_SPEED-ig
+		const float SPEED = 100; //milyen gyorsan gyorsul a karakter vizszintesen a MAX_SPEED-ig
 		const float JUMP_SIZE = -400; //vitathato, kiserletezzunk
 		const float MAX_SPEED = 500; //max vizszintes speed (ennel lehet egy kicsit gyorsabb, kiserletezzunk
+		const float FRICTION = 0.8; //mennyire lassuljon le a karakter, ha nem nyomunk semmit (0.8 eleg jo)
     protected:
 		static void _bind_methods();  //Azert hogy a godot tudja hasznalni a fuggvenyeket
 

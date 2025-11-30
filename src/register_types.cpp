@@ -4,7 +4,6 @@
 
 #include "gdexample.h"
 #include "player.h"
-#include "jumpButton.h"
 
 #include <gdextension_interface.h>
 #include <godot_cpp/core/defs.hpp>
@@ -19,7 +18,6 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
 
     GDREGISTER_RUNTIME_CLASS(GDExample); //Itt a GDExample osztaly, hogy lassa a Godot
 	GDREGISTER_RUNTIME_CLASS(Player);  //Itt a Player osztaly, hogy lassa a Godot
-	GDREGISTER_RUNTIME_CLASS(jumpButton); //Itt a jumpButton osztaly, hogy lassa a Godot
 }
 
 void uninitialize_example_module(ModuleInitializationLevel p_level) {
