@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://bcm8xcp4mwlxa"]
+[gd_scene load_steps=8 format=3 uid="uid://bcm8xcp4mwlxa"]
 
 [ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://cat leon without bg.webp" id="2_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://bw7dhy3inpxgq" path="res://ball.png" id="2_h2yge"]
 [ext_resource type="Texture2D" uid="uid://0sl4w0eecglj" path="res://icon.svg" id="3_h2yge"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
@@ -40,6 +41,14 @@ texture = ExtResource("3_h2yge")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
 shape = SubResource("CapsuleShape2D_7mycd")
+
+[node name="BallParent" type="BallParent" parent="."]
+
+[node name="Ball" type="Ball" parent="BallParent"]
+
+[node name="Sprite2D" type="Sprite2D" parent="BallParent/Ball"]
+scale = Vector2(0.12, 0.12)
+texture = ExtResource("2_h2yge")
 
 [node name="Player" type="Player" parent="."]
 position = Vector2(923, 118)
