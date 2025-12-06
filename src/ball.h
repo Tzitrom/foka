@@ -23,6 +23,9 @@ private:
     BallParent* ball_parent = nullptr;
     Player* player = nullptr;
 
-    double elapsed = 0.0;   // elapsed time for interpolation
-    double speed = 0.5;     // cycles per second
+    bool moving = false;
+    double t = 0.0;
+    Vector2 start_pos;
+    Vector2 target_pos;
+    double speed = 1.0;     // cycles per second
 };
