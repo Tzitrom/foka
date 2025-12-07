@@ -1,9 +1,9 @@
-//Ezt a tutorialt a Godot docs alapján készítettem: https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html
+//Ezt a tutorialt a Godot docs alapjan keszitettem: https://docs.godotengine.org/en/stable/tutorials/scripting/gdextension/gdextension_cpp_example.html
 
-#include "gdexample.h" //Azért hogy lássuk a gdexample.h tartalmát
-#include <godot_cpp/core/class_db.hpp> //Kötelezõ
+#include "gdexample.h" //Azert hogy lassuk a gdexample.h tartalmat
+#include <godot_cpp/core/class_db.hpp> //Kotelezo
 
-using namespace godot; //Ha nem akarod odatenni minden sor elé hogy godot:: xd
+using namespace godot; //Ha nem akarod odatenni minden sor ele hogy godot::
 
 void GDExample::_bind_methods() {
     ClassDB::bind_method(D_METHOD("get_amplitude"), &GDExample::get_amplitude);

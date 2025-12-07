@@ -1,7 +1,6 @@
 #pragma once //minden header elejen legyen ott pls
 
 #include <godot_cpp/classes/character_body2d.hpp>
-#include "ballparent.h"
 #include "player.h"
 
 using namespace godot; // ok here (project uses this style)
@@ -19,13 +18,8 @@ public:
     void _ready() override;
     void _process(double delta) override;
 
+    Vector2 target;
 private:
-    BallParent* ball_parent = nullptr;
-    Player* player = nullptr;
+    float speed = 500.0f;
 
-    bool moving = false;
-    double t = 0.0;
-    Vector2 start_pos;
-    Vector2 target_pos;
-    double speed = 1.0;     // cycles per second
 };

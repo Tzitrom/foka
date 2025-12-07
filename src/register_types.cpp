@@ -4,7 +4,6 @@
 
 #include "gdexample.h"
 #include "player.h"
-#include "ballparent.h"
 #include "ball.h"
 
 #include <gdextension_interface.h>
@@ -19,7 +18,6 @@ void initialize_example_module(ModuleInitializationLevel p_level) {
     }
     GDREGISTER_RUNTIME_CLASS(GDExample); //Itt a GDExample osztaly, hogy lassa a Godot
 	GDREGISTER_RUNTIME_CLASS(Player);  //Itt a Player osztaly, hogy lassa a Godot
-    GDREGISTER_RUNTIME_CLASS(BallParent);  //Itt a Ball osztaly, hogy lassa a Godot
 	GDREGISTER_RUNTIME_CLASS(Ball);  //Itt a Ball osztaly, hogy lassa a Godot
 
 }
