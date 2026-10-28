@@ -2,6 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://cat leon without bg.webp" id="2_0xm2m"]
 [ext_resource type="Texture2D" uid="uid://0sl4w0eecglj" path="res://icon.svg" id="3_h2yge"]
+[ext_resource type="Script" path="res://player.gd" id="4_player"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
 size = Vector2(1151.5, 202)
@@ -41,8 +42,9 @@ texture = ExtResource("3_h2yge")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D" unique_id=553389643]
 shape = SubResource("CapsuleShape2D_7mycd")
 
-[node name="Player" type="Player" parent="." unique_id=570346723]
+[node name="Player" type="CharacterBody2D" parent="." unique_id=570346723]
 position = Vector2(923, 118)
+script = ExtResource("4_player")
 
 [node name="textura" type="Sprite2D" parent="Player" unique_id=158376046]
 position = Vector2(1.9999924, -2.0000153)
@@ -65,4 +67,4 @@ offset_left = 878.0
 offset_top = 11.0
 offset_right = 1040.0
 offset_bottom = 34.0
-text = "C++ Gravity"
+text = "GDScript Player"

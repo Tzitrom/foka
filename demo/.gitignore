@@ -3,10 +3,10 @@
 # =============================
 
 # Godot-specific
+.godot/
 .import/
 .export/
 .export_presets.cfg
-*.godot
 *.mono
 *.mono.sln
 *.mono.csproj
@@ -14,26 +14,6 @@
 # Cache
 .cache/
 *.log
-
-# =============================
-# C++ GDExtension / Godot-cpp
-# =============================
-
-# Godot-cpp build output
-godot-cpp/bin/
-godot-cpp/build/
-godot-cpp/include/gen/          # auto-generated binding headers (optional, can ignore)
-godot-cpp/src/.sconsign.dblite  # scons cache
-
-# Your own extension build output
-build/
-bin/
-*.dll
-*.lib
-*.so
-*.dylib
-*.exp
-*.pdb
 
 # =============================
 # IDE / Editor
