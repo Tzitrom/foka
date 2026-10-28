@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://2tfdanvo4elv"
-path="res://.godot/imported/pali.png-d11c5d7dce27716922074a7d20fc39b5.ctex"
+uid="uid://cgtjx1et3mow8"
+path="res://.godot/imported/cat leon without bg.webp-49ce6f9c0987a9867bef86185e0d1982.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pali.png"
-dest_files=["res://.godot/imported/pali.png-d11c5d7dce27716922074a7d20fc39b5.ctex"]
+source_file="res://Assets/cat leon without bg.webp"
+dest_files=["res://.godot/imported/cat leon without bg.webp-49ce6f9c0987a9867bef86185e0d1982.ctex"]
 
 [params]
 

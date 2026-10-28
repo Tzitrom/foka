@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l0p40ah8qtmb"
-path="res://.godot/imported/oak texture.png-b9ab0aadb3ab4d7b205f8aa40b748131.ctex"
+uid="uid://2tfdanvo4elv"
+path="res://.godot/imported/pali.png-8d46037e28982693ca969876fbe4f4cf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://oak texture.png"
-dest_files=["res://.godot/imported/oak texture.png-b9ab0aadb3ab4d7b205f8aa40b748131.ctex"]
+source_file="res://Assets/pali.png"
+dest_files=["res://.godot/imported/pali.png-8d46037e28982693ca969876fbe4f4cf.ctex"]
 
 [params]
 

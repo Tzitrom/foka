@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cgtjx1et3mow8"
-path="res://.godot/imported/cat leon without bg.webp-98ba9789f49f1663bd6811cbe9328f63.ctex"
+uid="uid://l0p40ah8qtmb"
+path="res://.godot/imported/oak texture.png-07df1cc394efa3ed3349d032984c4757.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://cat leon without bg.webp"
-dest_files=["res://.godot/imported/cat leon without bg.webp-98ba9789f49f1663bd6811cbe9328f63.ctex"]
+source_file="res://Assets/oak texture.png"
+dest_files=["res://.godot/imported/oak texture.png-07df1cc394efa3ed3349d032984c4757.ctex"]
 
 [params]
 
