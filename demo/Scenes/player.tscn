@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://ckmucp7neayn2"]
+
+[ext_resource type="Script" uid="uid://djmhgbn08ai0f" path="res://Scenes/playerreal.gd" id="1_cvnsp"]
+[ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://Assets/cat leon without bg.webp" id="1_v0iea"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
+size = Vector2(66, 116)
+
+[node name="Player" type="CharacterBody2D" unique_id=1922821683]
+script = ExtResource("1_cvnsp")
+
+[node name="Textura" type="Sprite2D" parent="." unique_id=568434214]
+position = Vector2(1.9999924, -2.0000153)
+scale = Vector2(0.268, 0.268)
+texture = ExtResource("1_v0iea")
+
+[node name="Hitbox" type="CollisionShape2D" parent="." unique_id=1210672349]
+position = Vector2(2, -2)
+shape = SubResource("RectangleShape2D_cvnsp")
