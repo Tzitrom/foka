@@ -1,7 +1,7 @@
 # Foka
 
-A small Godot project written in GDScript.
+Fóka Legendák alapján készülő játék.
 
-Open `demo/project.godot` with Godot 4.7 or newer and run the project. The player
-uses the `balra`, `jobbra`, and `ugras` input actions configured in the project.
-No native extension or C++ build step is required.
+**LE KELL FRISSÍTENED A GODOTOT** legalább 4.7-es verzióra.
+
+Nyisd meg a `demo/project.godot` fájlt Godot 4.7-ben. 
