@@ -1,0 +1,90 @@
+[gd_scene format=3 uid="uid://c734kcg4rm4n"]
+
+[ext_resource type="Script" uid="uid://duwt000c8ej3c" path="res://Scenes/PauseMenu/pause_menu.gd" id="1_40me1"]
+[ext_resource type="LabelSettings" uid="uid://bse2ghbunj38o" path="res://Resources/beta_cim.tres" id="1_bgicp"]
+
+[node name="PauseMenu" type="Control" unique_id=679060756]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_40me1")
+
+[node name="HatterSzin" type="ColorRect" parent="." unique_id=1479897293]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -100.0
+offset_top = -100.0
+offset_right = 100.0
+offset_bottom = 100.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.07058824, 0, 0.8039216, 0.25490198)
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=982047983]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -169.5
+offset_top = -182.0
+offset_right = 169.5
+offset_bottom = 182.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MenuCim" type="Label" parent="VB" unique_id=709039094]
+layout_mode = 2
+text = "Beállítások"
+label_settings = ExtResource("1_bgicp")
+horizontal_alignment = 1
+
+[node name="MC" type="MarginContainer" parent="VB" unique_id=1653233690]
+layout_mode = 2
+theme_override_constants/margin_top = 87
+
+[node name="HB" type="HBoxContainer" parent="VB" unique_id=1076946689]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="VisszaGomb" type="Button" parent="VB/HB" unique_id=1241560031]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+size_flags_horizontal = 4
+tooltip_text = "Vissza a játékba"
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.42745098, 1)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.5568628, 1)
+theme_override_font_sizes/font_size = 20
+text = "Vissza"
+
+[node name="MC" type="MarginContainer" parent="VB/HB" unique_id=1881814502]
+layout_mode = 2
+theme_override_constants/margin_left = 44
+
+[node name="KilepesGomb" type="Button" parent="VB/HB" unique_id=761505081]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.8745098, 0.45490196, 0.43137255, 1)
+theme_override_font_sizes/font_size = 20
+text = "Kilépés"
+
+[node name="MC2" type="MarginContainer" parent="VB" unique_id=2118993578]
+layout_mode = 2
+theme_override_constants/margin_top = 84
+
+[connection signal="pressed" from="VB/HB/VisszaGomb" to="." method="_on_vissza_gomb_pressed"]
+[connection signal="pressed" from="VB/HB/VisszaGomb" to="VB/HB/VisszaGomb" method="_on_pressed"]
+[connection signal="pressed" from="VB/HB/KilepesGomb" to="." method="_on_kilepes_gomb_pressed"]
+[connection signal="pressed" from="VB/HB/KilepesGomb" to="VB/HB/KilepesGomb" method="_on_pressed"]

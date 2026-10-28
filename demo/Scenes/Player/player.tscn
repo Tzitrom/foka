@@ -1,13 +1,13 @@
 [gd_scene format=3 uid="uid://ckmucp7neayn2"]
 
-[ext_resource type="Script" uid="uid://djmhgbn08ai0f" path="res://Scenes/playerreal.gd" id="1_cvnsp"]
+[ext_resource type="Script" uid="uid://c31m6youfue6o" path="res://Scenes/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Texture2D" uid="uid://cgtjx1et3mow8" path="res://Assets/cat leon without bg.webp" id="1_v0iea"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cvnsp"]
 size = Vector2(66, 116)
 
 [node name="Player" type="CharacterBody2D" unique_id=1922821683]
-script = ExtResource("1_cvnsp")
+script = ExtResource("1_a3d8c")
 
 [node name="Textura" type="Sprite2D" parent="." unique_id=568434214]
 position = Vector2(1.9999924, -2.0000153)
