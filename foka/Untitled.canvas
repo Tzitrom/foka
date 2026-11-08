@@ -1,0 +1,214 @@
+{
+	"nodes":[
+		{"id":"76544646897ef127","type":"group","x":-320,"y":-240,"width":480,"height":600,"label":"Act 0"},
+		{"id":"26df5daf82e4eb51","type":"group","x":200,"y":-240,"width":920,"height":280,"label":"Act I"},
+		{"id":"8c410be9ca2f1ff2","type":"group","x":2320,"y":-920,"width":569,"height":396,"label":"Acton kívül"},
+		{"id":"316a50669f3ba1f9","type":"group","x":1180,"y":-240,"width":540,"height":100,"label":"Act II"},
+		{"id":"4a66e3f22209167a","type":"group","x":1740,"y":-240,"width":520,"height":100,"label":"Act III"},
+		{
+			"id":"f72b69c0ad85c8b3",
+			"type":"text",
+			"text":"# [[FRANCIAORSZÁG]]",
+			"styleAttributes":{},
+			"x":1440,
+			"y":-220,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"67a664da500fbb8e",
+			"type":"text",
+			"text":"# [[ANGLIA]]",
+			"styleAttributes":{},
+			"x":1200,
+			"y":-220,
+			"width":160,
+			"height":60
+		},
+		{
+			"id":"e1c2ce676ccf766d",
+			"type":"text",
+			"text":"# [[USA]]",
+			"styleAttributes":{},
+			"x":1760,
+			"y":-220,
+			"width":100,
+			"height":60
+		},
+		{
+			"id":"3a7bf0e8a5d593b1",
+			"type":"text",
+			"text":"# [[OROSZORSZÁG]]",
+			"styleAttributes":{},
+			"x":1980,
+			"y":-220,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"dff2f064447e5bc8",
+			"type":"text",
+			"text":"# [[KAJÁK]]",
+			"styleAttributes":{},
+			"x":2600,
+			"y":-900,
+			"width":160,
+			"height":60
+		},
+		{
+			"id":"e3369795669a5d5b",
+			"type":"text",
+			"text":"# [[JÖVŐ]]",
+			"styleAttributes":{},
+			"x":2440,
+			"y":-880,
+			"width":120,
+			"height":60
+		},
+		{
+			"id":"de0989f2a0dacac0",
+			"type":"text",
+			"text":"# [[VÍZ ALATT]]",
+			"styleAttributes":{},
+			"x":2494,
+			"y":-780,
+			"width":180,
+			"height":60
+		},
+		{
+			"id":"e1fc984b95708739",
+			"type":"text",
+			"text":"# [[VIKING]]",
+			"styleAttributes":{},
+			"x":2709,
+			"y":-745,
+			"width":160,
+			"height":60
+		},
+		{
+			"id":"0e0f0edfb811fbe3",
+			"type":"text",
+			"text":"# [[STEAMPUNK]]",
+			"styleAttributes":{},
+			"x":2340,
+			"y":-666,
+			"width":240,
+			"height":60
+		},
+		{
+			"id":"0cbce2713be9cead",
+			"type":"text",
+			"text":"# [[JAPÁN]]",
+			"styleAttributes":{},
+			"x":2628,
+			"y":-604,
+			"width":160,
+			"height":60
+		},
+		{
+			"id":"b494f89ef0e6f996",
+			"type":"text",
+			"text":"# [[GÖRÖGORSZÁG]]",
+			"styleAttributes":{},
+			"x":540,
+			"y":-220,
+			"width":260,
+			"height":60
+		},
+		{
+			"id":"85b25667c57767fa",
+			"type":"text",
+			"text":"# [[RÓMA]]",
+			"styleAttributes":{},
+			"x":860,
+			"y":-220,
+			"width":140,
+			"height":60
+		},
+		{
+			"id":"7f9a324d93458ac7",
+			"type":"text",
+			"text":"# [[EGYIPTOM]]",
+			"styleAttributes":{},
+			"x":240,
+			"y":-220,
+			"width":180,
+			"height":60
+		},
+		{
+			"id":"2421b6ed436e8ef3",
+			"type":"text",
+			"text":"# [[PROLÓGUS]]",
+			"styleAttributes":{
+				"shape":null,
+				"textAlign":"center"
+			},
+			"x":-800,
+			"y":-220,
+			"width":280,
+			"height":140
+		},
+		{
+			"id":"01fa23a2eed582c2",
+			"type":"text",
+			"text":"# [[TUTORIAL]]",
+			"styleAttributes":{},
+			"x":-230,
+			"y":-220,
+			"width":180,
+			"height":60
+		},
+		{
+			"id":"cf8cf1fc90134415",
+			"type":"text",
+			"text":"## (ŐSKOR)",
+			"styleAttributes":{},
+			"x":-210,
+			"y":-160,
+			"width":140,
+			"height":60
+		}
+	],
+	"edges":[
+		{
+			"id":"8514be32318cf10c",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"2421b6ed436e8ef3",
+			"fromSide":"right",
+			"toNode":"01fa23a2eed582c2",
+			"toSide":"left"
+		},
+		{
+			"id":"17db84c3433eacc4",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"01fa23a2eed582c2",
+			"fromSide":"right",
+			"toNode":"26df5daf82e4eb51",
+			"toSide":"left"
+		},
+		{
+			"id":"49e315f3fe148b5a",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"26df5daf82e4eb51",
+			"fromSide":"right",
+			"toNode":"316a50669f3ba1f9",
+			"toSide":"left"
+		},
+		{
+			"id":"4ce77ea8ec0a8e33",
+			"styleAttributes":{},
+			"toFloating":false,
+			"fromNode":"316a50669f3ba1f9",
+			"fromSide":"right",
+			"toNode":"4a66e3f22209167a",
+			"toSide":"left"
+		}
+	],
+	"metadata":{
+		"version":"1.0-1.0",
+		"frontmatter":{}
+	}
+}
