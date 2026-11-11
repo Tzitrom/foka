@@ -1,11 +1,12 @@
 extends Node2D
 
-@onready var pause_menu: Control = $PauseMenu
-@onready var player: Player = $Jatek/Player
+@onready var pause_menu: Control = $UILayer/PauseMenu
+@onready var player: Player = $Pausable/Player
 
 func _ready() -> void:
 	SignalHub.kilepes_megnyomva.connect(kilepes_a_jatekbol)
 	SignalHub.vissza_a_jatekba.connect(vissza_a_jatekba)
+	SignalHub.restart.connect(vissza_a_jatekba)
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape", false):

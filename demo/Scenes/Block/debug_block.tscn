@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://d231qk216h04n"]
+
+[ext_resource type="Texture2D" uid="uid://l0p40ah8qtmb" path="res://Assets/oak texture.png" id="1_mllpi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mllpi"]
+size = Vector2(160, 160)
+
+[node name="DebugBlock" type="StaticBody2D" unique_id=872390148]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=270687673]
+scale = Vector2(10, 10)
+texture = ExtResource("1_mllpi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=362831179]
+shape = SubResource("RectangleShape2D_mllpi")

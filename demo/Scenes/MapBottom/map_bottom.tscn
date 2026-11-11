@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://c4c6y0uw2nn6j"]
+
+[ext_resource type="Script" uid="uid://cc8njju7togt6" path="res://Scenes/MapBottom/map_bottom.gd" id="1_up0mq"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_j1aul"]
+
+[node name="MapBottom" type="Area2D" unique_id=1567336925]
+collision_layer = 0
+script = ExtResource("1_up0mq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1126246745]
+shape = SubResource("WorldBoundaryShape2D_j1aul")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,55 +1,50 @@
 [gd_scene format=3 uid="uid://bcm8xcp4mwlxa"]
 
 [ext_resource type="Script" uid="uid://b7itrh3i1x5iq" path="res://Scenes/Main/main.gd" id="1_5yls4"]
-[ext_resource type="Texture2D" uid="uid://0sl4w0eecglj" path="res://icon.svg" id="1_lixft"]
 [ext_resource type="PackedScene" uid="uid://ckmucp7neayn2" path="res://Scenes/Player/player.tscn" id="2_qw60k"]
 [ext_resource type="PackedScene" uid="uid://c734kcg4rm4n" path="res://Scenes/PauseMenu/pause_menu.tscn" id="3_5yls4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
-size = Vector2(1151.5, 202)
-
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_lquwl"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7mycd"]
-radius = 38.0
-height = 152.0
+[ext_resource type="PackedScene" uid="uid://d231qk216h04n" path="res://Scenes/Block/debug_block.tscn" id="4_5yls4"]
+[ext_resource type="PackedScene" uid="uid://c4c6y0uw2nn6j" path="res://Scenes/MapBottom/map_bottom.tscn" id="5_p6jpk"]
 
 [node name="Main" type="Node2D" unique_id=1111627078]
 process_mode = 3
 script = ExtResource("1_5yls4")
 
-[node name="Jatek" type="Node" parent="." unique_id=1833502724]
+[node name="Pausable" type="Node2D" parent="." unique_id=995720221]
 process_mode = 1
 
-[node name="StaticBody2D" type="StaticBody2D" parent="Jatek" unique_id=843627837]
-
-[node name="Sprite2D" type="Sprite2D" parent="Jatek/StaticBody2D" unique_id=1002540345]
-position = Vector2(575.5, 544.5)
-scale = Vector2(9.0234375, 1.5546875)
-texture = ExtResource("1_lixft")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jatek/StaticBody2D" unique_id=334145739]
-position = Vector2(576.25, 546)
-shape = SubResource("RectangleShape2D_1bvp3")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="Jatek" unique_id=383110324]
-position = Vector2(321, 117)
-rotation = 0.71343905
-
-[node name="MeshInstance2D" type="MeshInstance2D" parent="Jatek/RigidBody2D" unique_id=791269957]
-position = Vector2(1.684956, 1.0774618)
-scale = Vector2(75.5, 75.5)
-mesh = SubResource("CapsuleMesh_lquwl")
-texture = ExtResource("1_lixft")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Jatek/RigidBody2D" unique_id=553389643]
-shape = SubResource("CapsuleShape2D_7mycd")
-
-[node name="Player" parent="Jatek" unique_id=1922821683 instance=ExtResource("2_qw60k")]
+[node name="Player" parent="Pausable" unique_id=1922821683 instance=ExtResource("2_qw60k")]
 position = Vector2(908, 124)
 
-[node name="PauseMenu" parent="." unique_id=679060756 instance=ExtResource("3_5yls4")]
+[node name="DebugBlock" parent="Pausable" unique_id=872390148 instance=ExtResource("4_5yls4")]
+position = Vector2(913, 475)
+
+[node name="DebugBlock2" parent="Pausable" unique_id=1159395754 instance=ExtResource("4_5yls4")]
+position = Vector2(570, 398)
+
+[node name="DebugBlock3" parent="Pausable" unique_id=1191631477 instance=ExtResource("4_5yls4")]
+position = Vector2(193, 296)
+
+[node name="DebugBlock4" parent="Pausable" unique_id=945341910 instance=ExtResource("4_5yls4")]
+position = Vector2(-2, 188)
+
+[node name="DebugBlock5" parent="Pausable" unique_id=1014336925 instance=ExtResource("4_5yls4")]
+position = Vector2(432, -45)
+
+[node name="MapBottom" parent="Pausable" unique_id=1229631177 instance=ExtResource("5_p6jpk")]
+position = Vector2(563, 835)
+
+[node name="UILayer" type="CanvasLayer" parent="." unique_id=911219734]
+
+[node name="PauseMenu" parent="UILayer" unique_id=679060756 instance=ExtResource("3_5yls4")]
 visible = false
 z_index = 10
-offset_right = 1152.0
-offset_bottom = 648.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0

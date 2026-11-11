@@ -12,37 +12,48 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_40me1")
 
-[node name="HatterSzin" type="ColorRect" parent="." unique_id=1479897293]
-custom_minimum_size = Vector2(600, 400)
+[node name="VB2" type="VBoxContainer" parent="." unique_id=633776569]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 13
 anchor_left = 0.5
-anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -100.0
-offset_top = -100.0
-offset_right = 100.0
-offset_bottom = 100.0
-grow_horizontal = 2
-grow_vertical = 2
-color = Color(0.07058824, 0, 0.8039216, 0.25490198)
-
-[node name="VB" type="VBoxContainer" parent="." unique_id=982047983]
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -169.5
-offset_top = -182.0
-offset_right = 169.5
-offset_bottom = 182.0
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_right = 300.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+
+[node name="MC3" type="MarginContainer" parent="VB2" unique_id=2067438465]
+layout_mode = 2
+theme_override_constants/margin_top = 150
+
+[node name="HatterSzin" type="ColorRect" parent="VB2" unique_id=1479897293]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+color = Color(0.07058824, 0, 0.8039216, 0.25490198)
+
+[node name="MC2" type="MarginContainer" parent="VB2" unique_id=1671470891]
+layout_mode = 2
+theme_override_constants/margin_top = 84
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=982047983]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.5
+offset_right = 169.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MC3" type="MarginContainer" parent="VB" unique_id=1523938055]
+layout_mode = 2
+theme_override_constants/margin_top = 150
 
 [node name="MenuCim" type="Label" parent="VB" unique_id=709039094]
 layout_mode = 2
@@ -80,6 +91,18 @@ theme_override_colors/font_color = Color(0.8745098, 0.45490196, 0.43137255, 1)
 theme_override_font_sizes/font_size = 20
 text = "Kilépés"
 
+[node name="MC2" type="MarginContainer" parent="VB/HB" unique_id=913812079]
+layout_mode = 2
+theme_override_constants/margin_left = 44
+
+[node name="RestartGomb" type="Button" parent="VB/HB" unique_id=506105616]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.18539724, 0.7163737, 5.7756904e-07, 1)
+theme_override_font_sizes/font_size = 20
+text = "Restart"
+
 [node name="MC2" type="MarginContainer" parent="VB" unique_id=2118993578]
 layout_mode = 2
 theme_override_constants/margin_top = 84
@@ -88,3 +111,4 @@ theme_override_constants/margin_top = 84
 [connection signal="pressed" from="VB/HB/VisszaGomb" to="VB/HB/VisszaGomb" method="_on_pressed"]
 [connection signal="pressed" from="VB/HB/KilepesGomb" to="." method="_on_kilepes_gomb_pressed"]
 [connection signal="pressed" from="VB/HB/KilepesGomb" to="VB/HB/KilepesGomb" method="_on_pressed"]
+[connection signal="pressed" from="VB/HB/RestartGomb" to="." method="_on_restart_gomb_pressed"]
