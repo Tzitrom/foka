@@ -7,3 +7,7 @@ func _on_vissza_gomb_pressed() -> void:
 
 func _on_kilepes_gomb_pressed() -> void:
 	SignalHub.emit_kilepes()
+
+
+func _on_restart_gomb_pressed() -> void:
+	SignalHub.emit_restart()

@@ -39,5 +39,12 @@ position = Vector2(563, 835)
 [node name="PauseMenu" parent="UILayer" unique_id=679060756 instance=ExtResource("3_5yls4")]
 visible = false
 z_index = 10
-offset_right = 1152.0
-offset_bottom = 648.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -576.0
+offset_top = -324.0
+offset_right = 576.0
+offset_bottom = 324.0

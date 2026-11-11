@@ -91,6 +91,18 @@ theme_override_colors/font_color = Color(0.8745098, 0.45490196, 0.43137255, 1)
 theme_override_font_sizes/font_size = 20
 text = "Kilépés"
 
+[node name="MC2" type="MarginContainer" parent="VB/HB" unique_id=913812079]
+layout_mode = 2
+theme_override_constants/margin_left = 44
+
+[node name="RestartGomb" type="Button" parent="VB/HB" unique_id=506105616]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.18539724, 0.7163737, 5.7756904e-07, 1)
+theme_override_font_sizes/font_size = 20
+text = "Restart"
+
 [node name="MC2" type="MarginContainer" parent="VB" unique_id=2118993578]
 layout_mode = 2
 theme_override_constants/margin_top = 84
@@ -99,3 +111,4 @@ theme_override_constants/margin_top = 84
 [connection signal="pressed" from="VB/HB/VisszaGomb" to="VB/HB/VisszaGomb" method="_on_pressed"]
 [connection signal="pressed" from="VB/HB/KilepesGomb" to="." method="_on_kilepes_gomb_pressed"]
 [connection signal="pressed" from="VB/HB/KilepesGomb" to="VB/HB/KilepesGomb" method="_on_pressed"]
+[connection signal="pressed" from="VB/HB/RestartGomb" to="." method="_on_restart_gomb_pressed"]

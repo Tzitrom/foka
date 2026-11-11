@@ -1,9 +1,9 @@
 class_name Player
 extends CharacterBody2D
 
-@export var gravity: float = 1500.0
+@export var gravity: float = 3000.0
 @export var acceleration: float = 100.0   #a sima elindulásért
-@export var jump_velocity: float = 600.0
+@export var jump_velocity: float = 1200.0
 @export var max_speed: float = 500.0 # ez lehet hogy egy kicsit gyors (500)...
 @export_range(0.0, 1.0) var friction: float = 0.8
 
@@ -18,6 +18,7 @@ func _unhandled_input(event: InputEvent) -> void:
 
 func _ready() -> void:
 	startpos = position
+	SignalHub.restart.connect(die)
 
 func _physics_process(delta: float) -> void:
 	velocity.y += gravity * delta    ## mindig huzza lefele a gravity, tickenként a delta változóval gyorsulva
@@ -47,4 +48,5 @@ func jump() -> void:
 
 func die() -> void:
 	position = startpos
+	velocity = Vector2.ZERO
 	
