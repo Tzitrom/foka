@@ -29,12 +29,22 @@ position = Vector2(193, 296)
 position = Vector2(-2, 188)
 
 [node name="DebugBlock5" parent="Pausable" unique_id=1014336925 instance=ExtResource("4_5yls4")]
-position = Vector2(432, -45)
+position = Vector2(413, -29)
+
+[node name="DebugBlock6" parent="Pausable" unique_id=536778657 instance=ExtResource("4_5yls4")]
+position = Vector2(838, -115)
 
 [node name="MapBottom" parent="Pausable" unique_id=1229631177 instance=ExtResource("5_p6jpk")]
 position = Vector2(563, 835)
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=911219734]
+
+[node name="Debug" type="Label" parent="UILayer" unique_id=1825898246]
+offset_left = 68.0
+offset_top = 47.0
+offset_right = 212.0
+offset_bottom = 70.0
+text = "asdasdasdasdasds"
 
 [node name="PauseMenu" parent="UILayer" unique_id=679060756 instance=ExtResource("3_5yls4")]
 visible = false
