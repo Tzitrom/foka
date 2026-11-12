@@ -35,6 +35,9 @@ func _physics_process(delta: float) -> void:
 	
 	move_and_slide()
 	
+	if (!is_zero_approx(velocity.x)):
+		textura.flip_h = velocity.x < 0
+	
 	###
 	### var mouse_offset := get_global_mouse_position().x - global_position.x
 	### if mouse_offset > 0.0:
