@@ -1,0 +1,115 @@
+[gd_scene format=3 uid="uid://o4vj4ud48er6"]
+
+[ext_resource type="Script" uid="uid://cf51kmsihkpki" path="res://Scenes/SettingsMenu/settings_menu.gd" id="1_1lds4"]
+[ext_resource type="LabelSettings" uid="uid://bse2ghbunj38o" path="res://Resources/beta_cim.tres" id="1_r3on5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_r3on5"]
+font_size = 24
+font_color = Color(0.9199681, 0.72136873, 0.8307772, 1)
+outline_size = 4
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 0.3254902)
+shadow_offset = Vector2(2.86, 1.84)
+
+[node name="settings_menu" type="Control" unique_id=1082261465]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1lds4")
+
+[node name="VB2" type="VBoxContainer" parent="." unique_id=335793230]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_right = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MC3" type="MarginContainer" parent="VB2" unique_id=1160924922]
+layout_mode = 2
+theme_override_constants/margin_top = 150
+
+[node name="HatterSzin" type="ColorRect" parent="VB2" unique_id=1768505034]
+custom_minimum_size = Vector2(600, 400)
+layout_mode = 2
+color = Color(0.48527467, 4.813075e-06, 0.32345155, 0.25490198)
+
+[node name="MC2" type="MarginContainer" parent="VB2" unique_id=1324652199]
+layout_mode = 2
+theme_override_constants/margin_top = 84
+
+[node name="VB" type="VBoxContainer" parent="." unique_id=423853902]
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -169.5
+offset_right = 169.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="MC3" type="MarginContainer" parent="VB" unique_id=1668954895]
+layout_mode = 2
+theme_override_constants/margin_top = 150
+
+[node name="MenuCim" type="Label" parent="VB" unique_id=985281843]
+layout_mode = 2
+text = "Beállítások"
+label_settings = ExtResource("1_r3on5")
+horizontal_alignment = 1
+
+[node name="MC4" type="MarginContainer" parent="VB" unique_id=776414033]
+layout_mode = 2
+theme_override_constants/margin_top = 66
+
+[node name="HB" type="HBoxContainer" parent="VB" unique_id=1551703035]
+layout_mode = 2
+
+[node name="DoublejumpLabel" type="Label" parent="VB/HB" unique_id=2020363139]
+layout_mode = 2
+text = "Double-Jump:"
+label_settings = SubResource("LabelSettings_r3on5")
+
+[node name="DoublejumpGomb" type="CheckButton" parent="VB/HB" unique_id=31725718]
+layout_mode = 2
+size_flags_horizontal = 10
+size_flags_vertical = 4
+
+[node name="HB2" type="HBoxContainer" parent="VB" unique_id=281432697]
+layout_mode = 2
+
+[node name="DashLabel" type="Label" parent="VB/HB2" unique_id=1787538072]
+layout_mode = 2
+text = "Dash:"
+label_settings = SubResource("LabelSettings_r3on5")
+
+[node name="DashGomb" type="CheckButton" parent="VB/HB2" unique_id=135219991]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[node name="HB3" type="HBoxContainer" parent="VB" unique_id=1192999404]
+layout_mode = 2
+
+[node name="WallclimbLabel" type="Label" parent="VB/HB3" unique_id=758607583]
+layout_mode = 2
+text = "Wall-Climb:"
+label_settings = SubResource("LabelSettings_r3on5")
+
+[node name="WallclimbGomb" type="CheckButton" parent="VB/HB3" unique_id=1445414506]
+layout_mode = 2
+size_flags_horizontal = 10
+
+[connection signal="toggled" from="VB/HB/DoublejumpGomb" to="." method="_on_doublejump_gomb_toggled"]
+[connection signal="toggled" from="VB/HB2/DashGomb" to="." method="_on_dash_gomb_toggled"]
+[connection signal="toggled" from="VB/HB3/WallclimbGomb" to="." method="_on_wallclimb_gomb_toggled"]

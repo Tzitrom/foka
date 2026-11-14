@@ -57,7 +57,7 @@ theme_override_constants/margin_top = 150
 
 [node name="MenuCim" type="Label" parent="VB" unique_id=709039094]
 layout_mode = 2
-text = "Beállítások"
+text = "Menü"
 label_settings = ExtResource("1_bgicp")
 horizontal_alignment = 1
 
@@ -103,6 +103,18 @@ theme_override_colors/font_color = Color(0.18539724, 0.7163737, 5.7756904e-07, 1
 theme_override_font_sizes/font_size = 20
 text = "Restart"
 
+[node name="MC3" type="MarginContainer" parent="VB/HB" unique_id=1995934778]
+layout_mode = 2
+theme_override_constants/margin_left = 44
+
+[node name="SettingsGomb" type="Button" parent="VB/HB" unique_id=1000731858]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0.6625314, 0.8126314, 1)
+theme_override_font_sizes/font_size = 20
+text = "Beállítások"
+
 [node name="MC2" type="MarginContainer" parent="VB" unique_id=2118993578]
 layout_mode = 2
 theme_override_constants/margin_top = 84
@@ -112,3 +124,4 @@ theme_override_constants/margin_top = 84
 [connection signal="pressed" from="VB/HB/KilepesGomb" to="." method="_on_kilepes_gomb_pressed"]
 [connection signal="pressed" from="VB/HB/KilepesGomb" to="VB/HB/KilepesGomb" method="_on_pressed"]
 [connection signal="pressed" from="VB/HB/RestartGomb" to="." method="_on_restart_gomb_pressed"]
+[connection signal="pressed" from="VB/HB/SettingsGomb" to="." method="_on_settings_gomb_pressed"]
