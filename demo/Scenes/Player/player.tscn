@@ -25,3 +25,5 @@ position_smoothing_enabled = true
 [node name="DashCDTimer" type="Timer" parent="." unique_id=1315007551]
 wait_time = 2.0
 one_shot = true
+
+[connection signal="timeout" from="DashCDTimer" to="." method="_on_dash_cd_timer_timeout"]
