@@ -23,6 +23,10 @@ position = Vector2(913, 475)
 [node name="DebugBlock7" parent="Pausable" unique_id=1155255089 instance=ExtResource("4_5yls4")]
 position = Vector2(1076, 475)
 
+[node name="DebugBlock12" parent="Pausable" unique_id=1853951641 instance=ExtResource("4_5yls4")]
+position = Vector2(1076, 475)
+scale = Vector2(23.495, 1)
+
 [node name="DebugBlock8" parent="Pausable" unique_id=758506312 instance=ExtResource("4_5yls4")]
 position = Vector2(1393, 475)
 
