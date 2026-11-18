@@ -16,6 +16,13 @@ process_mode = 1
 
 [node name="Player" parent="Pausable" unique_id=1922821683 instance=ExtResource("2_qw60k")]
 position = Vector2(908, 124)
+gravity = null
+acceleration = null
+jump_velocity = null
+max_speed = null
+dash_speed = null
+dash_cooldown = null
+dash_ido = null
 
 [node name="DebugBlock" parent="Pausable" unique_id=872390148 instance=ExtResource("4_5yls4")]
 position = Vector2(913, 475)

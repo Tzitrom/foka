@@ -12,7 +12,7 @@ func _ready() -> void:
 	SignalHub.settings.connect(beallitasok)
 
 func _physics_process(_delta: float) -> void:
-	debug.text = "Pozicio: %d, %d\nSebesseg: %d, %d\nUgrik: %s\nDouble Jump: %s\nDash: %s\nWall Climb: %s\nIrany: %d\n tud_dash: %s" % [
+	debug.text = "Pozicio: %d, %d\nSebesseg: %d, %d\nUgrik: %s\nDouble Jump: %s\nDash: %s\nWall Climb: %s\nIrany: %d\ntud_dash: %s\nUgrasok: %d" % [
 		player.position.x, 
 		player.position.y, 
 		player.velocity.x, 
@@ -23,6 +23,7 @@ func _physics_process(_delta: float) -> void:
 		player.wall_climb_unlocked,
 		player.irany,
 		player.tud_dash,
+		player.ugrasok,
 		]
 
 func _input(event: InputEvent) -> void:
