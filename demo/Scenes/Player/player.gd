@@ -11,6 +11,7 @@ extends CharacterBody2D
 @export var dash_speed: float = 1000.0 
 @export var dash_cooldown: int = 2
 @export var dash_ido: float = 0.2 # a dasheles ideje
+@export var coyote_time : float = 1.0
 @export_range(0.0, 1.0) var friction: float = 0.8
 
 
@@ -26,6 +27,7 @@ var tud_dash : bool = false # hogyha lejárt a cooldown
 var dash_cd_lejart : bool = true
 var ugrasok : int = 2
 var max_ugrasok : int = 1
+var coyote_szamolo : float = 0.0
 
 func _ready() -> void:
 	startpos = position
@@ -64,8 +66,14 @@ func _physics_process(delta: float) -> void:
 		dash(delta)
 		dashing = true
 	
-	if !in_air:
+	if !in_air and velocity.y >= 0:
+		coyote_szamolo = coyote_time
 		ugrasok = max_ugrasok
+	elif coyote_szamolo > 0.0:
+			coyote_szamolo = max(0.0, coyote_szamolo - delta)
+			
+			if coyote_szamolo > 0.0:
+				ugrasok = max(0, ugrasok - 1)
 	
 	max_ugrasok = 2 if double_jump_unlocked else 1
 	
@@ -96,6 +104,7 @@ func jump() -> void:
 	if ugrasok > 0:
 		ugrasok = ugrasok - 1
 		velocity.y = -jump_velocity
+		coyote_szamolo = 0.0
 
 func die() -> void:
 	position = startpos
