@@ -8,6 +8,7 @@ size = Vector2(66, 116)
 
 [node name="Player" type="CharacterBody2D" unique_id=1922821683]
 script = ExtResource("1_a3d8c")
+acceleration = 999.0
 friction = 0.196
 
 [node name="Textura" type="Sprite2D" parent="." unique_id=568434214]
