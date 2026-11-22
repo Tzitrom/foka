@@ -22,6 +22,7 @@ shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1842138566]
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
 
 [node name="DashCDTimer" type="Timer" parent="." unique_id=1315007551]
 wait_time = 2.0

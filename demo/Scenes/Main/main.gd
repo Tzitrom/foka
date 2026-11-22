@@ -12,20 +12,22 @@ func _ready() -> void:
 	SignalHub.settings.connect(beallitasok)
 
 func _physics_process(_delta: float) -> void:
-	debug.text = "Pozicio: %d, %d\nSebesseg: %d, %d\nUgrik: %s\nDouble Jump: %s\nDash: %s\nWall Climb: %s\nIrany: %d\ntud_dash: %s\nUgrasok: %d\nCoyote Time: %d" % [
+	debug.text = "Pozicio: %d, %d\nSebesseg: %d, %d\nUgrik: %s\nDouble Jump: %s\nDash: %s\nWall Climb: %s\nIrany: %d\ntud_dash: %s\nUgrasok: %d\nDashing: %s\nWall Sliding: %s" % [
 		player.position.x, 
 		player.position.y, 
 		player.velocity.x, 
 		player.velocity.y,
-		player.in_air,
+		!player.is_on_floor(),
 		player.double_jump_unlocked,
 		player.dash_unlocked,
 		player.wall_climb_unlocked,
 		player.irany,
 		player.tud_dash,
 		player.ugrasok,
-		player.coyote_szamolo,
+		player.dashing,
+		player.wall_sliding
 		]
+	debug.text += "\nWall Climb Szamolo: %f" % player.wall_climb_szamolo
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape", false):
