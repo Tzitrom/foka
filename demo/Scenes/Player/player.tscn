@@ -8,6 +8,7 @@ size = Vector2(66, 116)
 
 [node name="Player" type="CharacterBody2D" unique_id=1922821683]
 script = ExtResource("1_a3d8c")
+acceleration = 999.0
 friction = 0.196
 
 [node name="Textura" type="Sprite2D" parent="." unique_id=568434214]
@@ -21,3 +22,10 @@ shape = SubResource("RectangleShape2D_cvnsp")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1842138566]
 position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="DashCDTimer" type="Timer" parent="." unique_id=1315007551]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="timeout" from="DashCDTimer" to="." method="_on_dash_cd_timer_timeout"]
