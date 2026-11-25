@@ -3,7 +3,7 @@ extends Node2D
 @onready var pause_menu: Control = $UILayer/PauseMenu
 @onready var settings_menu: Control = $UILayer/SettingsMenu
 @onready var player: Player = $Pausable/Player
-@onready var debug: Label = $UILayer/Debug
+@onready var debug: RichTextLabel = $UILayer/Debug
 
 func _ready() -> void:
 	SignalHub.kilepes_megnyomva.connect(kilepes_a_jatekbol)
@@ -12,22 +12,7 @@ func _ready() -> void:
 	SignalHub.settings.connect(beallitasok)
 
 func _physics_process(_delta: float) -> void:
-	debug.text = "Pozicio: %d, %d\nSebesseg: %d, %d\nUgrik: %s\nDouble Jump: %s\nDash: %s\nWall Climb: %s\nIrany: %d\ntud_dash: %s\nUgrasok: %d\nDashing: %s\nWall Sliding: %s" % [
-		player.position.x, 
-		player.position.y, 
-		player.velocity.x, 
-		player.velocity.y,
-		!player.is_on_floor(),
-		player.double_jump_unlocked,
-		player.dash_unlocked,
-		player.wall_climb_unlocked,
-		player.irany,
-		player.tud_dash,
-		player.ugrasok,
-		player.dashing,
-		player.wall_sliding
-		]
-	debug.text += "\nWall Climb Szamolo: %f" % player.wall_climb_szamolo
+	debug_text()
 
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("escape", false):
@@ -54,3 +39,36 @@ func unpause() -> void:
 func beallitasok() -> void:
 	pause_menu.hide()
 	settings_menu.show()
+
+func debug_text() -> void:
+	debug.text = (
+		"Position: %d, %d\n" +
+		"Velocity: %d, %d\n" +
+		"Ugrik: %s\n" +
+		"Double Jump: %s\n" +
+		"Dash: %s\n" +
+		"Wall Climb: %s\n" +
+		"Irany: %d\n" +
+		"Tud dash: %s\n" +
+		"Ugrasok: %d\n" +
+		"Dashing: %s\n" +
+		"Wall Sliding: %s\n" +
+		"Wall Climb Szamolo: %f\n"
+	) % [
+		player.position.x, player.position.y,
+		player.velocity.x, player.velocity.y,
+		color_bool(!player.is_on_floor()),
+		color_bool(player.double_jump_unlocked),
+		color_bool(player.dash_unlocked),
+		color_bool(player.wall_climb_unlocked),
+		player.irany,
+		color_bool(player.tud_dash),
+		player.ugrasok,
+		color_bool(player.dashing),
+		color_bool(player.wall_sliding),
+		player.wall_climb_szamolo
+	]
+	
+
+func color_bool(value) -> String:
+	return "[color=green]true[/color]" if value else "[color=red]false[/color]"

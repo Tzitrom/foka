@@ -60,12 +60,18 @@ position = Vector2(563, 835)
 
 [node name="UILayer" type="CanvasLayer" parent="." unique_id=911219734]
 
-[node name="Debug" type="Label" parent="UILayer" unique_id=1825898246]
-offset_left = 68.0
-offset_top = 47.0
-offset_right = 212.0
-offset_bottom = 70.0
-text = "asdasdasdasdasds"
+[node name="Debug" type="RichTextLabel" parent="UILayer" unique_id=1130700938]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 47.0
+offset_top = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+bbcode_enabled = true
+text = "asdasd"
 
 [node name="PauseMenu" parent="UILayer" unique_id=679060756 instance=ExtResource("3_5yls4")]
 visible = false
