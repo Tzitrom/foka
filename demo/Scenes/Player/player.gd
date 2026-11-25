@@ -19,10 +19,10 @@ extends CharacterBody2D
 @export var dash_speed: float = 1800.0 
 @export var dash_cooldown : float = 0.35
 
-@export var wall_slide_speed : float = 100.0
+@export var wall_slide_speed : float = 150.0
 @export var wall_slide_gravitacio : float = 10.0
-@export var wall_climb_speed_h : float = 300.0
-@export var wall_climb_speed_v : float = 420.0
+@export var wall_climb_speed_h : float = 500.0
+@export var wall_climb_speed_v : float = 840.0
 @export var wall_climb_time : float = 0.12
 
 
@@ -83,7 +83,7 @@ func timerek_reset(delta: float) -> void:
 	coyote_szamolo = max(coyote_szamolo - delta, 0.0)
 	jump_buffer_szamolo = max(jump_buffer_szamolo - delta, 0.0)
 	dash_cd_szamolo = max(dash_cd_szamolo - delta, 0.0)
-	wall_climb_szamolo = max(wall_climb_time - delta, 0.0)
+	wall_climb_szamolo = max(wall_climb_szamolo - delta, 0.0)
 	
 	if is_on_floor() or (wall_climb_unlocked and is_on_wall()):
 		coyote_szamolo = coyote_time
@@ -93,6 +93,8 @@ func timerek_reset(delta: float) -> void:
 		ugrasok = max_ugrasok
 
 func vizszintes_mozgas(delta: float, direction: float) -> void:
+	if wall_climb_szamolo > 0:
+		return
 	if direction:
 		var speed := direction * seta_speed
 		
@@ -113,7 +115,7 @@ func jump(_delta: float) -> void:
 		
 		if wall_irany != 0.0:
 			velocity.x = wall_irany * wall_climb_speed_h
-			velocity.y = -wall_climb_speed_v
+			velocity.y = -jump_velocity
 			wall_climb_szamolo = wall_climb_time
 			jump_buffer_szamolo = 0.0
 			coyote_szamolo = 0.0

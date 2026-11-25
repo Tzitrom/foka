@@ -25,6 +25,7 @@ SignalHub="*uid://dfa0asacu4yn7"
 
 [display]
 
+window/size/mode=2
 window/stretch/aspect="expand"
 
 [input]
