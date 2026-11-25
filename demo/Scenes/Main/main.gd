@@ -49,11 +49,12 @@ func debug_text() -> void:
 		"Dash: %s\n" +
 		"Wall Climb: %s\n" +
 		"Irany: %d\n" +
-		"Tud dash: %s\n" +
+		"Tud ugrani: %s\n" +
 		"Ugrasok: %d\n" +
 		"Dashing: %s\n" +
 		"Wall Sliding: %s\n" +
-		"Wall Climb Szamolo: %f\n"
+		"Wall Climb Szamolo: %f\n" +
+		"Coyote Szamolo: %f\n"
 	) % [
 		player.position.x, player.position.y,
 		player.velocity.x, player.velocity.y,
@@ -62,11 +63,12 @@ func debug_text() -> void:
 		color_bool(player.dash_unlocked),
 		color_bool(player.wall_climb_unlocked),
 		player.irany,
-		color_bool(player.tud_dash),
+		color_bool(player.tud_ugrani),
 		player.ugrasok,
 		color_bool(player.dashing),
 		color_bool(player.wall_sliding),
-		player.wall_climb_szamolo
+		player.wall_climb_szamolo,
+		player.coyote_szamolo,
 	]
 	
 

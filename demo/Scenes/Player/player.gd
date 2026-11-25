@@ -39,7 +39,6 @@ var wall_climb_unlocked : bool = false # ha be van kapcsolva
 var irany : float = 0.0
 var ugrasok : int = 2
 var max_ugrasok : int = 1
-var tud_dash : bool = false # hogyha lejárt a cooldown
 
 var dash_irany : float = 0.0
 var dash_szamolo : float = 0.0 # ez a dashelés közben megy, annak az ideje
@@ -47,6 +46,7 @@ var dash_cd_szamolo : float = 0.0
 var coyote_szamolo : float = 0.0
 var jump_buffer_szamolo : float = 0.0
 var wall_climb_szamolo : float = 0.0
+var tud_ugrani : bool
 
 
 func _ready() -> void:
@@ -79,6 +79,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 	was_on_floor = is_on_floor()
 
+
 func timerek_reset(delta: float) -> void:
 	coyote_szamolo = max(coyote_szamolo - delta, 0.0)
 	jump_buffer_szamolo = max(jump_buffer_szamolo - delta, 0.0)
@@ -110,7 +111,7 @@ func jump(_delta: float) -> void:
 	if ugrasok > 0 and Input.is_action_just_pressed("ugras"):
 		jump_buffer_szamolo = jump_buffer_time
 	
-	if jump_buffer_szamolo > 0.0 and !is_on_floor() and is_on_wall():
+	if jump_buffer_szamolo > 0.0 and !is_on_floor() and is_on_wall() and double_jump_unlocked:
 		var wall_irany : float = sign(get_wall_normal().x)
 		
 		if wall_irany != 0.0:
@@ -121,7 +122,7 @@ func jump(_delta: float) -> void:
 			coyote_szamolo = 0.0
 			return
 	
-	var tud_ugrani : bool = is_on_floor() or coyote_szamolo > 0.0 or ugrasok < max_ugrasok
+	tud_ugrani = is_on_floor() or coyote_szamolo > 0.0 or ugrasok < max_ugrasok
 	
 	if jump_buffer_szamolo > 0.0 and ugrasok > 0 and tud_ugrani:
 		ugrasok -= 1
@@ -131,6 +132,7 @@ func jump(_delta: float) -> void:
 	
 	if Input.is_action_just_released("ugras") and velocity.y < 0.0:
 		velocity.y *= jump_megszakitas
+
 
 func gravitacio(delta: float, direction: float) -> void:
 	if !is_on_floor():
